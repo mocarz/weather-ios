@@ -15,6 +15,10 @@
 		1C4C427F2CA43AFE00AFB05D /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C427E2CA43AFE00AFB05D /* WeatherTests.swift */; };
 		1C4C42892CA43AFE00AFB05D /* WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C42882CA43AFE00AFB05D /* WeatherUITests.swift */; };
 		1C4C428B2CA43AFE00AFB05D /* WeatherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C428A2CA43AFE00AFB05D /* WeatherUITestsLaunchTests.swift */; };
+		1C4C42982CA43EA100AFB05D /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C42972CA43EA100AFB05D /* ApplicationCoordinator.swift */; };
+		1C4C429B2CA43F3F00AFB05D /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C429A2CA43F3F00AFB05D /* RouterProtocol.swift */; };
+		1C4C429D2CA43F6900AFB05D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C429C2CA43F6900AFB05D /* Router.swift */; };
+		1C4C42A02CA4405000AFB05D /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C429F2CA4405000AFB05D /* CustomNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		1C4C42842CA43AFE00AFB05D /* WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C4C42882CA43AFE00AFB05D /* WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUITests.swift; sourceTree = "<group>"; };
 		1C4C428A2CA43AFE00AFB05D /* WeatherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1C4C42972CA43EA100AFB05D /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		1C4C429A2CA43F3F00AFB05D /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		1C4C429C2CA43F6900AFB05D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		1C4C429F2CA4405000AFB05D /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,9 @@
 				1C4C42672CA43AFA00AFB05D /* AppDelegate.swift */,
 				1C4C42692CA43AFA00AFB05D /* SceneDelegate.swift */,
 				1C4C426B2CA43AFA00AFB05D /* ViewController.swift */,
+				1C4C42972CA43EA100AFB05D /* ApplicationCoordinator.swift */,
+				1C4C42992CA43F3200AFB05D /* Router */,
+				1C4C429E2CA4403800AFB05D /* Other */,
 				1C4C42702CA43AFD00AFB05D /* Assets.xcassets */,
 				1C4C42722CA43AFD00AFB05D /* LaunchScreen.storyboard */,
 				1C4C42752CA43AFD00AFB05D /* Info.plist */,
@@ -122,6 +133,23 @@
 				1C4C428A2CA43AFE00AFB05D /* WeatherUITestsLaunchTests.swift */,
 			);
 			path = WeatherUITests;
+			sourceTree = "<group>";
+		};
+		1C4C42992CA43F3200AFB05D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1C4C429A2CA43F3F00AFB05D /* RouterProtocol.swift */,
+				1C4C429C2CA43F6900AFB05D /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1C4C429E2CA4403800AFB05D /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1C4C429F2CA4405000AFB05D /* CustomNavigationController.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +284,11 @@
 			files = (
 				1C4C426C2CA43AFA00AFB05D /* ViewController.swift in Sources */,
 				1C4C42682CA43AFA00AFB05D /* AppDelegate.swift in Sources */,
+				1C4C429B2CA43F3F00AFB05D /* RouterProtocol.swift in Sources */,
 				1C4C426A2CA43AFA00AFB05D /* SceneDelegate.swift in Sources */,
+				1C4C429D2CA43F6900AFB05D /* Router.swift in Sources */,
+				1C4C42982CA43EA100AFB05D /* ApplicationCoordinator.swift in Sources */,
+				1C4C42A02CA4405000AFB05D /* CustomNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
