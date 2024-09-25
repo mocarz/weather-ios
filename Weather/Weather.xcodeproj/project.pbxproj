@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1C4C42682CA43AFA00AFB05D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C42672CA43AFA00AFB05D /* AppDelegate.swift */; };
 		1C4C426A2CA43AFA00AFB05D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C42692CA43AFA00AFB05D /* SceneDelegate.swift */; };
-		1C4C426C2CA43AFA00AFB05D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C426B2CA43AFA00AFB05D /* ViewController.swift */; };
 		1C4C42712CA43AFD00AFB05D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C4C42702CA43AFD00AFB05D /* Assets.xcassets */; };
 		1C4C42742CA43AFD00AFB05D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C4C42722CA43AFD00AFB05D /* LaunchScreen.storyboard */; };
 		1C4C427F2CA43AFE00AFB05D /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C427E2CA43AFE00AFB05D /* WeatherTests.swift */; };
@@ -19,6 +18,13 @@
 		1C4C429B2CA43F3F00AFB05D /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C429A2CA43F3F00AFB05D /* RouterProtocol.swift */; };
 		1C4C429D2CA43F6900AFB05D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C429C2CA43F6900AFB05D /* Router.swift */; };
 		1C4C42A02CA4405000AFB05D /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C429F2CA4405000AFB05D /* CustomNavigationController.swift */; };
+		1C5C6E542CA46AA600D89BD9 /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C6E532CA46AA600D89BD9 /* LocationPickerViewController.swift */; };
+		1C5C6E592CA46B0E00D89BD9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1C5C6E582CA46B0E00D89BD9 /* SnapKit */; };
+		1C5C6E5B2CA46B1D00D89BD9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C6E5A2CA46B1D00D89BD9 /* BaseViewController.swift */; };
+		1C5C6E5D2CA46C2E00D89BD9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1C5C6E5C2CA46C2E00D89BD9 /* RxSwift */; };
+		1C5C6E5F2CA46C3400D89BD9 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1C5C6E5E2CA46C3400D89BD9 /* RxCocoa */; };
+		1C5C6E612CA46C6100D89BD9 /* LocationPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C6E602CA46C6100D89BD9 /* LocationPickerViewModel.swift */; };
+		1C5C6E632CA46D8200D89BD9 /* ViewModelBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C6E622CA46D8200D89BD9 /* ViewModelBinding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +48,6 @@
 		1C4C42642CA43AFA00AFB05D /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C4C42672CA43AFA00AFB05D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C4C42692CA43AFA00AFB05D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1C4C426B2CA43AFA00AFB05D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1C4C42702CA43AFD00AFB05D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C4C42732CA43AFD00AFB05D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C4C42752CA43AFD00AFB05D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +60,10 @@
 		1C4C429A2CA43F3F00AFB05D /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		1C4C429C2CA43F6900AFB05D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		1C4C429F2CA4405000AFB05D /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		1C5C6E532CA46AA600D89BD9 /* LocationPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPickerViewController.swift; sourceTree = "<group>"; };
+		1C5C6E5A2CA46B1D00D89BD9 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1C5C6E602CA46C6100D89BD9 /* LocationPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerViewModel.swift; sourceTree = "<group>"; };
+		1C5C6E622CA46D8200D89BD9 /* ViewModelBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBinding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C5C6E5F2CA46C3400D89BD9 /* RxCocoa in Frameworks */,
+				1C5C6E5D2CA46C2E00D89BD9 /* RxSwift in Frameworks */,
+				1C5C6E592CA46B0E00D89BD9 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +101,7 @@
 				1C4C427D2CA43AFD00AFB05D /* WeatherTests */,
 				1C4C42872CA43AFE00AFB05D /* WeatherUITests */,
 				1C4C42652CA43AFA00AFB05D /* Products */,
+				1C5C6E552CA46AF400D89BD9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,8 +120,8 @@
 			children = (
 				1C4C42672CA43AFA00AFB05D /* AppDelegate.swift */,
 				1C4C42692CA43AFA00AFB05D /* SceneDelegate.swift */,
-				1C4C426B2CA43AFA00AFB05D /* ViewController.swift */,
 				1C4C42972CA43EA100AFB05D /* ApplicationCoordinator.swift */,
+				1C5C6E522CA46AA600D89BD9 /* LocationPicker */,
 				1C4C42992CA43F3200AFB05D /* Router */,
 				1C4C429E2CA4403800AFB05D /* Other */,
 				1C4C42702CA43AFD00AFB05D /* Assets.xcassets */,
@@ -148,8 +161,26 @@
 			isa = PBXGroup;
 			children = (
 				1C4C429F2CA4405000AFB05D /* CustomNavigationController.swift */,
+				1C5C6E5A2CA46B1D00D89BD9 /* BaseViewController.swift */,
+				1C5C6E622CA46D8200D89BD9 /* ViewModelBinding.swift */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		1C5C6E522CA46AA600D89BD9 /* LocationPicker */ = {
+			isa = PBXGroup;
+			children = (
+				1C5C6E532CA46AA600D89BD9 /* LocationPickerViewController.swift */,
+				1C5C6E602CA46C6100D89BD9 /* LocationPickerViewModel.swift */,
+			);
+			path = LocationPicker;
+			sourceTree = "<group>";
+		};
+		1C5C6E552CA46AF400D89BD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +199,11 @@
 			dependencies = (
 			);
 			name = Weather;
+			packageProductDependencies = (
+				1C5C6E582CA46B0E00D89BD9 /* SnapKit */,
+				1C5C6E5C2CA46C2E00D89BD9 /* RxSwift */,
+				1C5C6E5E2CA46C3400D89BD9 /* RxCocoa */,
+			);
 			productName = Weather;
 			productReference = 1C4C42642CA43AFA00AFB05D /* Weather.app */;
 			productType = "com.apple.product-type.application";
@@ -286,13 +322,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C4C426C2CA43AFA00AFB05D /* ViewController.swift in Sources */,
+				1C5C6E632CA46D8200D89BD9 /* ViewModelBinding.swift in Sources */,
+				1C5C6E612CA46C6100D89BD9 /* LocationPickerViewModel.swift in Sources */,
 				1C4C42682CA43AFA00AFB05D /* AppDelegate.swift in Sources */,
 				1C4C429B2CA43F3F00AFB05D /* RouterProtocol.swift in Sources */,
 				1C4C426A2CA43AFA00AFB05D /* SceneDelegate.swift in Sources */,
 				1C4C429D2CA43F6900AFB05D /* Router.swift in Sources */,
+				1C5C6E5B2CA46B1D00D89BD9 /* BaseViewController.swift in Sources */,
 				1C4C42982CA43EA100AFB05D /* ApplicationCoordinator.swift in Sources */,
 				1C4C42A02CA4405000AFB05D /* CustomNavigationController.swift in Sources */,
+				1C5C6E542CA46AA600D89BD9 /* LocationPickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +681,24 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1C5C6E582CA46B0E00D89BD9 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C4C42A22CA4416B00AFB05D /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		1C5C6E5C2CA46C2E00D89BD9 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C4C42A12CA4415700AFB05D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		1C5C6E5E2CA46C3400D89BD9 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C4C42A12CA4415700AFB05D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1C4C425C2CA43AFA00AFB05D /* Project object */;
 }

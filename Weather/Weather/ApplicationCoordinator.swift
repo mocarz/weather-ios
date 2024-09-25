@@ -19,11 +19,12 @@ class ApplicationCoordinator {
     }
 
     private func runFlow() {
-        showViewController()
+        showLocationPicker()
     }
 
-    private func showViewController() {
-        let vc = ViewController()
+    private func showLocationPicker() {
+        let vm = LocationPickerViewModel()
+        let vc = LocationPickerViewController(viewModel: vm)
         router.set(vc)
     }
 }
