@@ -10,22 +10,31 @@ import RxCocoa
 import RxSwift
 
 class LocationPickerViewModel: ViewModelBinding {
+    private var apiClient: WeatherApiClientProtocol
+
+    init(apiClient: WeatherApiClientProtocol) {
+        self.apiClient = apiClient
+    }
 
     struct Inputs {
         let search: Observable<String>
     }
 
     struct Outputs {
-        let locations: Observable<[String]>
+        let locationsShared: Observable<[LocationDto]>
     }
 
     func bind(_ inputs: Inputs) -> Outputs {
         let locations = inputs.search
             .filter({ $0 != ""})
             .distinctUntilChanged()
-            .map { search in ["Warszawa", "Gdańsk", "Wrocław"].filter { $0.starts(with: search) } }
+            .throttle(.milliseconds(1000), scheduler: MainScheduler.instance)
+            .flatMapLatest({[unowned self] query -> Observable<[LocationDto]> in
+                return self.apiClient.searchLocations(query: query)
+            })
+            .share(replay: 1)
 
-        return Outputs(locations: locations)
+        return Outputs(locationsShared: locations)
     }
 
 }

@@ -68,10 +68,18 @@ class LocationPickerViewController: BaseViewController {
         let input = LocationPickerViewModel.Inputs(search: searchBar.rx.text.orEmpty.asObservable())
         let output = viewModel.bind(input)
 
-        output.locations
+        output.locationsShared
+            .catchAndReturn([])
             .bind(to: tableView.rx.items(cellIdentifier: Self.cellIdentifier)) { _, res, cell in
-                cell.textLabel?.text = res
+                cell.textLabel?.text = "\(res.localizedName) (\(res.country.localizedName))"
             }
+            .disposed(by: disposeBag)
+        
+        output.locationsShared
+            .subscribe(onError: { [unowned self] error in
+                print(error)
+                self.showErrorAlert(error: error)
+            })
             .disposed(by: disposeBag)
     }
 }

@@ -11,6 +11,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     var coordinator: ApplicationCoordinator?
+    private let apiKey = "<#apikey#>"
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -24,7 +25,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = navigationController
 
         let router = Router(navigationController: navigationController)
-        let applicationCoordinator = ApplicationCoordinator(router: router)
+        let apiClient = AccuWeatherApiClient(apiKey: apiKey)
+        let applicationCoordinator = ApplicationCoordinator(router: router, apiClient: apiClient)
 
         applicationCoordinator.start()
         self.coordinator = applicationCoordinator

@@ -9,9 +9,11 @@ import Foundation
 
 class ApplicationCoordinator {
     private let router: RouterProtocol
+    private let apiClient: WeatherApiClientProtocol
 
-    init(router: RouterProtocol) {
+    init(router: RouterProtocol, apiClient: WeatherApiClientProtocol) {
         self.router = router
+        self.apiClient = apiClient
     }
 
     func start() {
@@ -23,7 +25,7 @@ class ApplicationCoordinator {
     }
 
     private func showLocationPicker() {
-        let vm = LocationPickerViewModel()
+        let vm = LocationPickerViewModel(apiClient: apiClient)
         let vc = LocationPickerViewController(viewModel: vm)
         router.set(vc)
     }

@@ -25,6 +25,12 @@
 		1C5C6E5F2CA46C3400D89BD9 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1C5C6E5E2CA46C3400D89BD9 /* RxCocoa */; };
 		1C5C6E612CA46C6100D89BD9 /* LocationPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C6E602CA46C6100D89BD9 /* LocationPickerViewModel.swift */; };
 		1C5C6E632CA46D8200D89BD9 /* ViewModelBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C6E622CA46D8200D89BD9 /* ViewModelBinding.swift */; };
+		1C5C6E662CA47E6D00D89BD9 /* WeatherApiClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C6E652CA47E6D00D89BD9 /* WeatherApiClientProtocol.swift */; };
+		1C5C6E692CA47E9400D89BD9 /* LocationDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C6E682CA47E9400D89BD9 /* LocationDto.swift */; };
+		1C5C6E6B2CA47EBA00D89BD9 /* APIRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C6E6A2CA47EBA00D89BD9 /* APIRequestProtocol.swift */; };
+		1C5C6E6D2CA47EE500D89BD9 /* RequestMethodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C6E6C2CA47EE500D89BD9 /* RequestMethodType.swift */; };
+		1C5C6E702CA47F2A00D89BD9 /* AccuWeatherApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C6E6F2CA47F2A00D89BD9 /* AccuWeatherApiClient.swift */; };
+		1C5C6E732CA47F9300D89BD9 /* AccuWeatherLocationSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C6E722CA47F9300D89BD9 /* AccuWeatherLocationSearchRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +70,12 @@
 		1C5C6E5A2CA46B1D00D89BD9 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1C5C6E602CA46C6100D89BD9 /* LocationPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerViewModel.swift; sourceTree = "<group>"; };
 		1C5C6E622CA46D8200D89BD9 /* ViewModelBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBinding.swift; sourceTree = "<group>"; };
+		1C5C6E652CA47E6D00D89BD9 /* WeatherApiClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApiClientProtocol.swift; sourceTree = "<group>"; };
+		1C5C6E682CA47E9400D89BD9 /* LocationDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDto.swift; sourceTree = "<group>"; };
+		1C5C6E6A2CA47EBA00D89BD9 /* APIRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestProtocol.swift; sourceTree = "<group>"; };
+		1C5C6E6C2CA47EE500D89BD9 /* RequestMethodType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethodType.swift; sourceTree = "<group>"; };
+		1C5C6E6F2CA47F2A00D89BD9 /* AccuWeatherApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccuWeatherApiClient.swift; sourceTree = "<group>"; };
+		1C5C6E722CA47F9300D89BD9 /* AccuWeatherLocationSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccuWeatherLocationSearchRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +135,7 @@
 				1C4C42972CA43EA100AFB05D /* ApplicationCoordinator.swift */,
 				1C5C6E522CA46AA600D89BD9 /* LocationPicker */,
 				1C4C42992CA43F3200AFB05D /* Router */,
+				1C5C6E642CA47E5500D89BD9 /* Networking */,
 				1C4C429E2CA4403800AFB05D /* Other */,
 				1C4C42702CA43AFD00AFB05D /* Assets.xcassets */,
 				1C4C42722CA43AFD00AFB05D /* LaunchScreen.storyboard */,
@@ -181,6 +194,43 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1C5C6E642CA47E5500D89BD9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1C5C6E6E2CA47F1A00D89BD9 /* AccuWeather */,
+				1C5C6E672CA47E8A00D89BD9 /* DTO */,
+				1C5C6E652CA47E6D00D89BD9 /* WeatherApiClientProtocol.swift */,
+				1C5C6E6A2CA47EBA00D89BD9 /* APIRequestProtocol.swift */,
+				1C5C6E6C2CA47EE500D89BD9 /* RequestMethodType.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1C5C6E672CA47E8A00D89BD9 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				1C5C6E682CA47E9400D89BD9 /* LocationDto.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		1C5C6E6E2CA47F1A00D89BD9 /* AccuWeather */ = {
+			isa = PBXGroup;
+			children = (
+				1C5C6E712CA47F5800D89BD9 /* Requests */,
+				1C5C6E6F2CA47F2A00D89BD9 /* AccuWeatherApiClient.swift */,
+			);
+			path = AccuWeather;
+			sourceTree = "<group>";
+		};
+		1C5C6E712CA47F5800D89BD9 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				1C5C6E722CA47F9300D89BD9 /* AccuWeatherLocationSearchRequest.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,13 +374,19 @@
 			files = (
 				1C5C6E632CA46D8200D89BD9 /* ViewModelBinding.swift in Sources */,
 				1C5C6E612CA46C6100D89BD9 /* LocationPickerViewModel.swift in Sources */,
+				1C5C6E6B2CA47EBA00D89BD9 /* APIRequestProtocol.swift in Sources */,
 				1C4C42682CA43AFA00AFB05D /* AppDelegate.swift in Sources */,
 				1C4C429B2CA43F3F00AFB05D /* RouterProtocol.swift in Sources */,
+				1C5C6E732CA47F9300D89BD9 /* AccuWeatherLocationSearchRequest.swift in Sources */,
 				1C4C426A2CA43AFA00AFB05D /* SceneDelegate.swift in Sources */,
 				1C4C429D2CA43F6900AFB05D /* Router.swift in Sources */,
 				1C5C6E5B2CA46B1D00D89BD9 /* BaseViewController.swift in Sources */,
 				1C4C42982CA43EA100AFB05D /* ApplicationCoordinator.swift in Sources */,
+				1C5C6E692CA47E9400D89BD9 /* LocationDto.swift in Sources */,
+				1C5C6E6D2CA47EE500D89BD9 /* RequestMethodType.swift in Sources */,
+				1C5C6E662CA47E6D00D89BD9 /* WeatherApiClientProtocol.swift in Sources */,
 				1C4C42A02CA4405000AFB05D /* CustomNavigationController.swift in Sources */,
+				1C5C6E702CA47F2A00D89BD9 /* AccuWeatherApiClient.swift in Sources */,
 				1C5C6E542CA46AA600D89BD9 /* LocationPickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
