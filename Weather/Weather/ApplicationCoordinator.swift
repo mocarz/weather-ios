@@ -11,15 +11,21 @@ import RxSwift
 class ApplicationCoordinator {
     private let router: RouterProtocol
     private let apiClient: WeatherApiClientProtocol
+    private let deepLink: DeepLink?
     private let disposeBag = DisposeBag()
 
-    init(router: RouterProtocol, apiClient: WeatherApiClientProtocol) {
+    init(router: RouterProtocol, apiClient: WeatherApiClientProtocol, deepLink: DeepLink? = nil) {
         self.router = router
         self.apiClient = apiClient
+        self.deepLink = deepLink
     }
 
     func start() {
-        runFlow()
+        if let deepLink = deepLink {
+            handleDeepLink(deepLink: deepLink)
+        } else {
+            runFlow()
+        }
     }
 
     private func runFlow() {
@@ -38,8 +44,14 @@ class ApplicationCoordinator {
     }
 
     private func pushWeatherDetails(location: LocationDto, animated: Bool = true) {
-        let vm = WeatherDetailsViewModel(location: location)
-        let vc = WeatherDetailsViewController(viewModel: vm)
+        let vc = WeatherDetailsViewController()
         router.push(vc)
+    }
+
+    private func handleDeepLink(deepLink: DeepLink, animated: Bool = false) {
+        switch deepLink {
+        case .weatherDetails(let location):
+            pushWeatherDetails(location: location, animated: animated)
+        }
     }
 }
