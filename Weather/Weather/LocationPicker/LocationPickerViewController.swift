@@ -11,6 +11,10 @@ import RxSwift
 import RxCocoa
 
 class LocationPickerViewController: BaseViewController {
+    private let _didSelectLocation = PublishSubject<LocationDto>()
+    var didSelectLocation: Observable<LocationDto> {
+        return _didSelectLocation.asObservable()
+    }
 
     private var searchBar: UISearchBar!
     private var tableView: UITableView!
@@ -74,12 +78,16 @@ class LocationPickerViewController: BaseViewController {
                 cell.textLabel?.text = "\(res.localizedName) (\(res.country.localizedName))"
             }
             .disposed(by: disposeBag)
-        
+
         output.locationsShared
             .subscribe(onError: { [unowned self] error in
                 print(error)
                 self.showErrorAlert(error: error)
             })
+            .disposed(by: disposeBag)
+
+        tableView.rx.modelSelected(LocationDto.self)
+            .bind(to: _didSelectLocation)
             .disposed(by: disposeBag)
     }
 }

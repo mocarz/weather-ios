@@ -17,21 +17,21 @@ class BaseViewController: UIViewController {
 
         view.backgroundColor = .systemBackground
     }
-    
+
     func showErrorAlert(message: String) {
         showAlert(title: "Oops, something went wrong.", message: message)
     }
-    
+
     func showErrorAlert(error: Error) {
         showErrorAlert(message: error.localizedDescription)
     }
-    
+
     func showAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
+
         let action = UIAlertAction(title: "Dismiss", style: .default)
         alertController.addAction(action)
-        
+
         present(alertController, animated: true, completion: nil)
     }
 }
