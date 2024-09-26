@@ -10,5 +10,6 @@ import RxSwift
 
 protocol WeatherApiClientProtocol {
     func searchLocations(query: String) -> Observable<[LocationDto]>
+    func getCurrentConditions(locationKey: String) -> Observable<CurrentConditionsDto>
     func send<T: Codable>(apiRequest: APIRequestProtocol) -> Observable<T>
 }

@@ -22,6 +22,17 @@ class AccuWeatherApiClient: WeatherApiClientProtocol {
         return self.send(apiRequest: request)
     }
 
+    func getCurrentConditions(locationKey: String) -> Observable<CurrentConditionsDto> {
+        return self.getAllCurrentConditions(locationKey: locationKey)
+            .map { $0.count > 0 ? $0[0] : nil}
+            .unwrap()
+    }
+
+    private func getAllCurrentConditions(locationKey: String) -> Observable<[CurrentConditionsDto]> {
+        let request = AccuWeatherCurrentConditionsRequest(key: locationKey, apiKey: apiKey)
+        return self.send(apiRequest: request)
+    }
+
     func send<T: Codable>(apiRequest: APIRequestProtocol) -> Observable<T> {
         print("send request")
         let request = apiRequest.request(with: baseURL)

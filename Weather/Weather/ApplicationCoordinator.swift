@@ -44,7 +44,8 @@ class ApplicationCoordinator {
     }
 
     private func pushWeatherDetails(location: LocationDto, animated: Bool = true) {
-        let vc = WeatherDetailsViewController()
+        let vm = WeatherDetailsViewModel(location: location, apiClient: apiClient)
+        let vc = WeatherDetailsViewController(viewModel: vm)
         router.push(vc)
     }
 
