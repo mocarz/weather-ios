@@ -1,0 +1,25 @@
+[
+    {
+        "LocalObservationDateTime": "2024-09-24T13:46:00+02:00",
+        "EpochTime": 1727178360,
+        "WeatherText": "Sunny",
+        "WeatherIcon": 16,
+        "HasPrecipitation": false,
+        "PrecipitationType": null,
+        "IsDayTime": true,
+        "Temperature": {
+            "Metric": {
+                "Value": 11.5,
+                "Unit": "C",
+                "UnitType": 17
+            },
+            "Imperial": {
+                "Value": 71,
+                "Unit": "F",
+                "UnitType": 18
+            }
+        },
+        "MobileLink": "http://www.accuweather.com/en/pl/gdask/1-275174_1_al/current-weather/1-275174_1_al?lang=en-us",
+        "Link": "http://www.accuweather.com/en/pl/gdask/1-275174_1_al/current-weather/1-275174_1_al?lang=en-us"
+    }
+]

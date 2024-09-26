@@ -1,0 +1,152 @@
+[
+    {
+        "Version": 1,
+        "Key": "274455",
+        "Type": "City",
+        "Rank": 31,
+        "LocalizedName": "Krakow",
+        "Country": {
+            "ID": "PL",
+            "LocalizedName": "Poland"
+        },
+        "AdministrativeArea": {
+            "ID": "12",
+            "LocalizedName": "Lesser Poland"
+        }
+    },
+    {
+        "Version": 1,
+        "Key": "173921",
+        "Type": "City",
+        "Rank": 83,
+        "LocalizedName": "Krakow am See",
+        "Country": {
+            "ID": "DE",
+            "LocalizedName": "Germany"
+        },
+        "AdministrativeArea": {
+            "ID": "MV",
+            "LocalizedName": "Mecklenburg-West"
+        }
+    },
+    {
+        "Version": 1,
+        "Key": "1366193",
+        "Type": "City",
+        "Rank": 85,
+        "LocalizedName": "Krakow",
+        "Country": {
+            "ID": "CA",
+            "LocalizedName": "Canada"
+        },
+        "AdministrativeArea": {
+            "ID": "AB",
+            "LocalizedName": "Alberta"
+        }
+    },
+    {
+        "Version": 1,
+        "Key": "2674836",
+        "Type": "City",
+        "Rank": 85,
+        "LocalizedName": "Krakowiany",
+        "Country": {
+            "ID": "PL",
+            "LocalizedName": "Poland"
+        },
+        "AdministrativeArea": {
+            "ID": "02",
+            "LocalizedName": "Lower Silesia"
+        }
+    },
+    {
+        "Version": 1,
+        "Key": "2720229",
+        "Type": "City",
+        "Rank": 85,
+        "LocalizedName": "Krakowica",
+        "Country": {
+            "ID": "PL",
+            "LocalizedName": "Poland"
+        },
+        "AdministrativeArea": {
+            "ID": "12",
+            "LocalizedName": "Lesser Poland"
+        }
+    },
+    {
+        "Version": 1,
+        "Key": "2715867",
+        "Type": "City",
+        "Rank": 85,
+        "LocalizedName": "Krakowiec-Stronie",
+        "Country": {
+            "ID": "PL",
+            "LocalizedName": "Poland"
+        },
+        "AdministrativeArea": {
+            "ID": "12",
+            "LocalizedName": "Lesser Poland"
+        }
+    },
+    {
+        "Version": 1,
+        "Key": "1402115",
+        "Type": "City",
+        "Rank": 85,
+        "LocalizedName": "Krakowiany",
+        "Country": {
+            "ID": "PL",
+            "LocalizedName": "Poland"
+        },
+        "AdministrativeArea": {
+            "ID": "14",
+            "LocalizedName": "Masovia"
+        }
+    },
+    {
+        "Version": 1,
+        "Key": "2674839",
+        "Type": "City",
+        "Rank": 85,
+        "LocalizedName": "Krakowiec-Gdańsk",
+        "Country": {
+            "ID": "PL",
+            "LocalizedName": "Poland"
+        },
+        "AdministrativeArea": {
+            "ID": "22",
+            "LocalizedName": "Pomerania"
+        }
+    },
+    {
+        "Version": 1,
+        "Key": "2674838",
+        "Type": "City",
+        "Rank": 85,
+        "LocalizedName": "Krakowice",
+        "Country": {
+            "ID": "PL",
+            "LocalizedName": "Poland"
+        },
+        "AdministrativeArea": {
+            "ID": "32",
+            "LocalizedName": "West Pomerania"
+        }
+    },
+    {
+        "Version": 1,
+        "Key": "2248688",
+        "Type": "City",
+        "Rank": 85,
+        "LocalizedName": "Krakow",
+        "Country": {
+            "ID": "US",
+            "LocalizedName": "United States"
+        },
+        "AdministrativeArea": {
+            "ID": "WI",
+            "LocalizedName": "Wisconsin"
+        }
+    }
+]
