@@ -43,6 +43,8 @@
 		1CC8454B2CA5E87B0006E488 /* current_conditions.json in Resources */ = {isa = PBXBuildFile; fileRef = 1CC845482CA5E87B0006E488 /* current_conditions.json */; };
 		1CC845502CA5F17D0006E488 /* StorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC8454F2CA5F17D0006E488 /* StorageProtocol.swift */; };
 		1CC845522CA5F18D0006E488 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC845512CA5F18D0006E488 /* Storage.swift */; };
+		1CC845542CA699530006E488 /* ObservableTypeUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC845532CA699530006E488 /* ObservableTypeUnitTests.swift */; };
+		1CC845562CA6996D0006E488 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC845552CA6996D0006E488 /* RxTest */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,7 @@
 		1CC845482CA5E87B0006E488 /* current_conditions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = current_conditions.json; sourceTree = "<group>"; };
 		1CC8454F2CA5F17D0006E488 /* StorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProtocol.swift; sourceTree = "<group>"; };
 		1CC845512CA5F18D0006E488 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		1CC845532CA699530006E488 /* ObservableTypeUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTypeUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CC845562CA6996D0006E488 /* RxTest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				1C4C427E2CA43AFE00AFB05D /* WeatherTests.swift */,
+				1CC845532CA699530006E488 /* ObservableTypeUnitTests.swift */,
 			);
 			path = WeatherTests;
 			sourceTree = "<group>";
@@ -332,6 +337,9 @@
 				1C4C427C2CA43AFD00AFB05D /* PBXTargetDependency */,
 			);
 			name = WeatherTests;
+			packageProductDependencies = (
+				1CC845552CA6996D0006E488 /* RxTest */,
+			);
 			productName = WeatherTests;
 			productReference = 1C4C427A2CA43AFD00AFB05D /* WeatherTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -467,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CC845542CA699530006E488 /* ObservableTypeUnitTests.swift in Sources */,
 				1C4C427F2CA43AFE00AFB05D /* WeatherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -825,6 +834,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1C4C42A12CA4415700AFB05D /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
+		};
+		1CC845552CA6996D0006E488 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C4C42A12CA4415700AFB05D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
