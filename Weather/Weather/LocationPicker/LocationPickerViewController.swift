@@ -69,7 +69,16 @@ class LocationPickerViewController: BaseViewController {
     }
 
     private func setupBindings() {
-        let input = LocationPickerViewModel.Inputs(search: searchBar.rx.text.orEmpty.asObservable())
+        let tableViewModelSelected = tableView.rx.modelSelected(LocationDto.self)
+
+        tableViewModelSelected
+            .bind(to: _didSelectLocation)
+            .disposed(by: disposeBag)
+
+        let input = LocationPickerViewModel.Inputs(
+            search: searchBar.rx.text.orEmpty.asObservable(),
+            locationSelected: tableViewModelSelected.asObservable()
+        )
         let output = viewModel.bind(input)
 
         output.locationsShared
@@ -86,9 +95,6 @@ class LocationPickerViewController: BaseViewController {
             })
             .disposed(by: disposeBag)
 
-        tableView.rx.modelSelected(LocationDto.self)
-            .bind(to: _didSelectLocation)
-            .disposed(by: disposeBag)
     }
 }
 

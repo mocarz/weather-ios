@@ -11,12 +11,14 @@ import RxSwift
 class ApplicationCoordinator {
     private let router: RouterProtocol
     private let apiClient: WeatherApiClientProtocol
+    private let storage: StorageProtocol
     private let deepLink: DeepLink?
     private let disposeBag = DisposeBag()
 
-    init(router: RouterProtocol, apiClient: WeatherApiClientProtocol, deepLink: DeepLink? = nil) {
+    init(router: RouterProtocol, apiClient: WeatherApiClientProtocol, storage: StorageProtocol, deepLink: DeepLink? = nil) {
         self.router = router
         self.apiClient = apiClient
+        self.storage = storage
         self.deepLink = deepLink
     }
 
@@ -29,11 +31,11 @@ class ApplicationCoordinator {
     }
 
     private func runFlow() {
-        showLocationPicker()
+        showLocationPicker(storage: storage)
     }
 
-    private func showLocationPicker() {
-        let vm = LocationPickerViewModel(apiClient: apiClient)
+    private func showLocationPicker(storage: StorageProtocol) {
+        let vm = LocationPickerViewModel(apiClient: apiClient, storage: storage)
         let vc = LocationPickerViewController(viewModel: vm)
 
         vc.didSelectLocation.subscribe(onNext: { [unowned self] location in

@@ -26,7 +26,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let router = Router(navigationController: navigationController)
         let apiClient = AccuWeatherApiClient(apiKey: apiKey)
-        let applicationCoordinator = ApplicationCoordinator(router: router, apiClient: apiClient)
+        let storage = Storage()
+        let applicationCoordinator = ApplicationCoordinator(router: router, apiClient: apiClient, storage: storage)
 
         applicationCoordinator.start()
         self.coordinator = applicationCoordinator
